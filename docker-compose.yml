@@ -1,0 +1,15 @@
+version: "3.7"
+ 
+services:
+    wa-server:
+        build:
+            context: .
+        container_name: "wa-server"    
+        restart: "always"    
+        ports:
+            - 3000:3000
+        volumes:
+            - wa_data:/opt/wa-server
+
+volumes:
+    wa_data:
